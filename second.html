@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+  </head>
+  <body onload="controllaRisposta()">
+    
+    
+    <script>
+      function controllaRisposta() {
+        
+        let risposta = prompt("Da che organizzazione è stata creata l'Agenda 2030? (ONU/UNICEF/EU)");
+
+        
+        if (risposta == onu) {
+          
+          window.location.href = "http://www.andreamp0.github.io/carnevale.mp4";
+        } else {
+          
+          alert("Risposta errata.");
+          location.reload();
+        }
+      }
+    </script>
+  </body>
+</html>
