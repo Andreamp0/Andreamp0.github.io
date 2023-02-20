@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chat</title>
+  </head>
+  <body>
+    <div id="chatlog"></div>
+    <input type="text" id="message" />
+    <button onclick="sendMessage()">Invia</button>
+
+    <script>
+      let chatlog = document.getElementById("chatlog");
+
+      function sendMessage() {
+        let message = document.getElementById("message").value;
+        let timestamp = new Date().toLocaleTimeString();
+        let formattedMessage = "[" + timestamp + "] Tu: " + message;
+        let chatMessage = document.createElement("p");
+        chatMessage.innerText = formattedMessage;
+        chatlog.appendChild(chatMessage);
+        document.getElementById("message").value = "";
+      }
+    </script>
+  </body>
+</html>
